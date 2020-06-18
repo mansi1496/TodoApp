@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonControlPanelComponent } from './button-control-panel/button-control-panel.component';
 import { TodoComponent } from './todo/todo.component';
 import { InputsModule } from '@progress/kendo-angular-inputs';
+import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
+
 
 
 
@@ -25,7 +27,8 @@ import { InputsModule } from '@progress/kendo-angular-inputs';
     AppRoutingModule,
     ButtonsModule,
     BrowserAnimationsModule,
-    InputsModule
+    InputsModule,
+    DateInputsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -25,23 +25,28 @@ input {
     height: 50px;
 }
 
-button.todo {
+.todo {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20%;
+    align-content: center;
     height: 50px;
-    background-image: none;
+    background: none;
     border: none;
     border-radius: 0;
     color: white;
-    cursor: grab;
     overflow: hidden;
     transition: 125ms ease background-color;
-    & span:hover {
-        color: indianred;
-        text-decoration: line-through;
-    }
     &:hover {
+        background-image: none;
+        color: hsl(0, 90%, 56%);
         outline: 1px solid rgba(176, 59, 16, 0.75);
         box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 0 10px rgba(0, 0, 0, 0.25);
         z-index: 100;
+    }
+    & span:hover {
+        color: indianred;
+        text-decoration: line-through;
     }
     &:active {
         cursor: grabbing;
@@ -60,4 +65,43 @@ $todos: 45;
 
 .cdk-drop-list-dragging .cdk-drag {
     transition: transform .5s cubic-bezier(0.88, -0.19, 0.26, 1.27);
+}
+
+.finished-list {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 100;
+}
+
+// time picker customizing styles
+.kendo-timepicker {
+    height: 30px;
+}
+
+.k-timepicker:hover,
+.k-timepicker:hover .k-select,
+.k-timepicker .k-picker-wrap,
+.k-dateinput .k-dateinput-wrap,
+.k-timepicker .k-select {
+    background: none;
+    border: none;
+}
+
+.k-timepicker:hover .k-select {
+    background-image: none;
+}
+
+.k-dateinput-wrap .k-input,
+.k-timepicker .k-select {
+    color: white !important;
+}
+
+.k-dateinput-wrap input:focus,
+.k-timepicker .k-state-focused {
+    box-shadow: none;
+}
+
+.k-dateinput-wrap input::selection {
+    background-color: transparent;
 }

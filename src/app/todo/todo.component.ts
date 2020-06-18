@@ -58,15 +58,19 @@ export class TodoComponent implements OnInit {
   todos = [
     {
       item : 'Take dog to vet',
+      due : new Date(),
     },
     {
       item : 'Take dog to vet',
+      due : new Date(),
     },
     {
       item : 'Take dog to vet',
+      due : new Date(),
     },
     {
       item : 'Take dog to vet',
+      due : new Date(),
     }
   ];
 
@@ -76,7 +80,7 @@ export class TodoComponent implements OnInit {
   }
 
   addTodo(input : HTMLInputElement){
-    this.todos = [{item : input.value}, ...this.todos];
+    this.todos = [{item : input.value, due : new Date()}, ...this.todos];
     input.value;
   }
   

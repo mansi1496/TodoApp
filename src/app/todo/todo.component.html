@@ -1,9 +1,15 @@
 <div @todoAnimations>
-    <h1>What shall I do today?</h1>
+
+    <div class="row">
+        <label>What shall I do today?</label>
+        <button kendoButton type="submit" style="float: right;">Send</button>
+    </div>
+
     <input kendoTextBox type="text" placeholder="Add new todo item" #itemInput (keyup.enter)="addTodo(itemInput)" class="new-todo-input">
     <div class="list-group" *ngIf="todos">
         <button kendoButton type="button" @todoItem class="todo" *ngFor="let todo of todos; index as i">
             <span (click) = "removeTodo(i)">{{todo.item}}</span>
+            <kendo-timepicker [(value)]="todo.due"></kendo-timepicker>
         </button>
     </div>
     <div *ngIf="todos.length === 0" class="finished-list">Fin.</div>
