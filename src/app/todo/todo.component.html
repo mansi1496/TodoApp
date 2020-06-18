@@ -1,4 +1,4 @@
-<div>
+<div @todoAnimations>
     <h1>What shall I do today?</h1>
     <input kendoTextBox type="text" placeholder="Add new todo item" #itemInput (keyup.enter)="addTodo(itemInput)" class="new-todo-input">
     <div class="list-group" *ngIf="todos">

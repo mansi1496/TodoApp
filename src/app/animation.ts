@@ -41,18 +41,8 @@ export let slideOutAnimation = animation([
 ]);
 
 export let moveDown = animation([
-    animate('0.5s cubic-bezier(.88,-0.19,.26,1.27)', keyframes([
-        style({
-          height: '50px',
-          opacity: 1,
-          transform: 'translateY(0)'
-        }),
-        style({
-          opacity: 0,
-          transform: 'translateY(-100%)'
-        }),
-        style({
-          height: 0
-        }),
-      ]))
+    style({
+      transform : 'translateY(-20px)'
+    }),
+    animate(200)
 ]);

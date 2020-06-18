@@ -23,7 +23,7 @@ import { slideInAnimation, slideOutAnimation, moveDown } from '../animation';
     ]),
 
     trigger('todoItem', [
-      transition(':ent2er', [
+      transition(':enter', [
        useAnimation(slideInAnimation)
       ]),
       transition(':leave', [
