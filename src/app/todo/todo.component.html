@@ -1,8 +1,9 @@
 <div @todoAnimations>
 
     <div class="row">
-        <label>What shall I do today?</label>
-        <button kendoButton type="submit" style="float: right;">Send</button>
+        <!-- <label>What shall I do today?</label>
+        <button kendoButton type="submit" style="float: right;">Send</button> -->
+        <h1 style="text-align: center; font-weight: 100;">What shall I do today?</h1>
     </div>
 
     <input kendoTextBox type="text" placeholder="Add new todo item" #itemInput (keyup.enter)="addTodo(itemInput)" class="new-todo-input">

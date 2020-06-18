@@ -34,7 +34,7 @@ input {
     background: none;
     border: none;
     border-radius: 0;
-    color: white;
+    color: white !important;
     overflow: hidden;
     transition: 125ms ease background-color;
     &:hover {
@@ -85,16 +85,16 @@ $todos: 45;
 .k-dateinput .k-dateinput-wrap,
 .k-timepicker .k-select {
     background: none;
-    border: none;
+    //border: none;
+    color: rgb(255, 255, 255);
 }
 
 .k-timepicker:hover .k-select {
     background-image: none;
 }
 
-.k-dateinput-wrap .k-input,
-.k-timepicker .k-select {
-    color: white !important;
+.k-dateinput .k-dateinput-wrap .k-input .input {
+    color: rgb(255, 255, 255);
 }
 
 .k-dateinput-wrap input:focus,
